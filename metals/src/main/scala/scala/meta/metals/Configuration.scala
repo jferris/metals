@@ -36,8 +36,8 @@ object Configuration {
       command: String = "",
   )
   @JsonCodec case class Scalac(
-      completions: Enabled = Enabled(false),
-      diagnostics: Enabled = Enabled(false),
+      completions: Enabled = Enabled(true),
+      diagnostics: Enabled = Enabled(true),
   ) {
     def enabled: Boolean = completions.enabled || diagnostics.enabled
   }
